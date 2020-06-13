@@ -1,10 +1,10 @@
 import React from 'react';
-import TodoList from '../todoListApp';
+import ExpenseTracker from '../ExpenseTracker';
 
 class App extends React.Component {
     render() {
         return (<div className="App">
-            <TodoList />
+            <ExpenseTracker />
         </div>);
     }
 }
