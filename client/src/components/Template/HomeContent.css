@@ -1,0 +1,22 @@
+/*Home page Main Content*/
+#home{
+    margin-top: 20px;
+}
+#home .box{
+    float: left;
+    text-align: center;
+    width: 30%;
+    padding: 10px;
+}
+#home .box img{
+    width: 90px;
+    height: auto;
+}
+/*Media Query*/
+@media(max-width: 768px){
+    #home .box{
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+}
