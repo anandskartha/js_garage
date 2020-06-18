@@ -1,5 +1,4 @@
 import React from 'react'
-import { Header } from './Header'
 import { Balance } from './Balance'
 import { IncomeExpense } from './IncomeExpense'
 import { TransactionList } from './TransactionList'
@@ -12,8 +11,7 @@ import './ExpenseTracker.css'
 function ExpenseTracker () {
     return (
         <GlobalProvider>
-            <Header />
-            <div className='container'>
+            <div className='expContainer'>
                 <Balance />
                 <IncomeExpense />
                 <TransactionList />

@@ -1,4 +1,8 @@
 /*Global*/
+.App{
+    position: relative;
+    min-height: 100vh;
+}
 .container{
     width: 80%;
     margin: auto;
@@ -15,6 +19,11 @@ header{
     padding-top: 30px;
     min-height: 70px;
     border-bottom: #61DBFB 3px solid;
+    min-width:100%;
+    float:left;
+    padding:15px;
+    width: 100%;
+    margin-bottom: 30px;
 }
 header a{
     color: #ffffff;

@@ -20,7 +20,7 @@ class HelloWorld extends Component {
     render() {
         return(
             <div className="HelloWorld">
-                <span class="boxclose" id="boxclose" onClick={this.removeGreeting} />
+                <span className="boxclose" id="boxclose" onClick={this.removeGreeting} />
                 <h3>Important message</h3>
                 {this.state.greeting} {this.props.name}!
                 <br/>

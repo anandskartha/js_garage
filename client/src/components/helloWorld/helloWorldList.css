@@ -1,6 +1,10 @@
 .HelloWorldList {
-    margin: 20px;
-    padding: 20px;
-    border: 2px solid #00D8FF;
-    background: #DDEEFF;
+    margin: auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #efefef;
+    padding: 0 30px 30px 30px;
+    background-color: #ffffff;
   }

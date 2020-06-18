@@ -1,7 +1,17 @@
 .AddGreeter {
     margin: 20px;
     padding: 20px;
-    border: 2px solid #00FFD8;
-    background: #DDFFEE;
+    background: #D3D3D3;
     text-align: center;
+  }
+  .AddGreeter input[type="text"],
+  .AddGreeter button{
+    width: 100%;
+    border:none;
+  }
+  .AddGreeter button{
+    background-color: #EF7777;
+    min-height: 30px;
+    color: #ffffff;
+    cursor: pointer;
   }
