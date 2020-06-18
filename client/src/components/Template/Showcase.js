@@ -6,7 +6,7 @@ function Showcase() {
         <section id="showcase">
             <div className="container">
                 <h1>Amazing React Applications</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum purus tellus, ut cursus purus pharetra in.</p>
+                <p>React is a JavaScript library for building user interfaces with a community of millions of developers working day and night to make application developers' life easy.</p>
             </div>
             
         </section>

@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
 import Showcase from '../Template/Showcase';
 import HomeContent from '../Template/HomeContent';
 import Footer from '../Template/Footer';
+import NavLink from '../Template/NavLink';
 
 import HelloWorld from '../helloWorld';
 import TodoListApp from '../todoListApp';
@@ -22,9 +23,9 @@ class App extends React.Component {
                             </div>
                             <nav>
                                 <ul>
-                                    <li><Link to="/helloWorld">HelloW</Link></li>
-                                    <li><Link to="/todoApp">TodoR</Link></li>
-                                    <li><Link to="/expenseTracker">Expenser</Link></li>
+                                    <li><NavLink to="/helloWorld" label="HelloW"/></li>
+                                    <li><NavLink to="/todoApp" label="TodoR" /></li>
+                                    <li><NavLink to="/expenseTracker" label="Expenser"/></li>
                                 </ul>
                             </nav>
                         </div>
