@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './helloWorld.css';
+import './HelloWorld.css';
 
 // const HelloWorld = props => {
 // return (<div className="HelloWorld">Hello {props.name}!</div>);

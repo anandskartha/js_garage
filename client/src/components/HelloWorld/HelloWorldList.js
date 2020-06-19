@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import HelloWorld from './helloWorld';
-import AddGreeter from './addGreeter';
-import './helloWorldList.css';
+import HelloWorld from './HelloWorld';
+import AddGreeter from './AddGreeter';
+import './HelloWorldList.css';
 
 class HelloWorldList  extends Component {
     constructor(props) {

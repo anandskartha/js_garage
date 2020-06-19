@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './addGreeter.css';
+import './AddGreeter.css';
 
 class AddGreeter extends Component {
     constructor(props) {

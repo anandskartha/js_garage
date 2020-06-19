@@ -1,7 +1,7 @@
 import React from 'react';
-import TodoListItem from './todoListItem';
-import './todoList.css';
-import todoData from './todoData';
+import TodoListItem from './TodoListItem';
+import './TodoList.css';
+import todoData from './TodoData';
 
 class TodoList extends React.Component{
     constructor() {

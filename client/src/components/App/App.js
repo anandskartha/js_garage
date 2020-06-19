@@ -5,11 +5,11 @@ import HomeContent from '../Template/HomeContent';
 import Footer from '../Template/Footer';
 import NavLink from '../Template/NavLink';
 
-import HelloWorld from '../helloWorld';
-import TodoListApp from '../todoListApp';
+import HelloWorld from '../HelloWorld';
+import TodoListApp from '../TodoListApp';
 import ExpenseTracker from '../ExpenseTracker';
 
-import './app.css';
+import './App.css';
 
 class App extends React.Component {
     render() {
@@ -38,9 +38,7 @@ class App extends React.Component {
                         <Route exact path='/helloWorld'>
                             <HelloWorld />
                         </Route>
-                        <Route exact path='/todoApp'>
-                            <TodoListApp />
-                        </Route>
+                        <Route exact path='/todoApp' component={TodoListApp} />
                         <Route exact path='/expenseTracker'>
                             <ExpenseTracker />
                         </Route>
