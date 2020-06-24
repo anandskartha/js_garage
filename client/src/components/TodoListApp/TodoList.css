@@ -1,12 +1,13 @@
 div.todo-list {
     background-color: white;
     margin: 20px auto auto auto;
-    width: 50%;
+    width: 65%;
+    float: left;
     display: flex;
     flex-direction: column;
     align-items: center;
     border: 1px solid #efefef;
-    padding: 0 30px 30px 30px;
+    padding: 0 10px 30px 10px;
     box-shadow: 
     /*The Top layer shadow*/
     0 1px 1px rgba(0,0,0,0.15),
@@ -18,4 +19,10 @@ div.todo-list {
     0 20px 0 -10px #eee,
     /*The Third layer shadow*/
     0 20px 1px -9px rgba(0,0,0,0.15)
+}
+@media(max-width: 768px){
+    div.todo-list{
+        width: 100%;
+        float: none;
+    }
 }

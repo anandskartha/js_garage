@@ -1,0 +1,21 @@
+aside#sideBar{
+    float: right;
+    width: 30%;
+    margin-top: 10px;
+    padding: 15px;
+    background: #35424a;
+    color: #ffffff;
+    margin-bottom: 10px;
+    margin-right: 30px;
+}
+aside#sideBar h3{
+    margin-top: 0px;
+}
+@media(max-width: 768px){
+    aside#sideBar{
+        float: none;
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}

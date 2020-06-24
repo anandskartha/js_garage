@@ -1,7 +1,7 @@
 /*Global*/
 .App{
-    position: relative;
-    min-height: 100vh;
+    position: absolute;
+    width: 100%;
 }
 .container{
     width: 80%;
@@ -12,6 +12,12 @@ ul{
     margin: 0;
     padding: 0;
 }
+div.main-content{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
 /*Header*/
 header{
     background: #35424a;
