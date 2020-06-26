@@ -4,14 +4,7 @@
     background: #D3D3D3;
     text-align: center;
   }
-  .AddGreeter input[type="text"],
-  .AddGreeter button{
+  .AddGreeter input[type="text"]{
     width: 100%;
     border:none;
-  }
-  .AddGreeter button{
-    background-color: #35424a;
-    min-height: 30px;
-    color: #ffffff;
-    cursor: pointer;
   }

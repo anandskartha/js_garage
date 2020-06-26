@@ -7,19 +7,25 @@ export default (state, action) => {
             }
         case 'DELETE_TRANSACTION':
             return {
-                ...state, //This is not needed as explained in the tutorial.
-                transactions: state.transactions.filter(transaction => transaction._id !== action.payload)
+                transactions: state.transactions.filter(transaction => transaction._id !== action.payload),
+                loading: false
             }
         case 'ADD_TRANSACTION':
-        return {
-            ...state, //This is not needed as explained in the tutorial.
-            transactions: [...state.transactions, action.payload]
-        }
+            return {
+                transactions: [...state.transactions, action.payload],
+                loading: false
+            }
         case 'TRANSACTION_ERROR':
-        return {
-            ...state,
-            error: action.payload
-        }
+            return {
+                ...state,
+                error: action.payload,
+                loading: false
+            }
+        case 'TRANSACTION_IN_PROGRESS':
+            return {
+                ...state,
+                loading: action.payload.loading || true
+            }
         default:
             return state
     }

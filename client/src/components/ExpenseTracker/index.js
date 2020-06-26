@@ -3,21 +3,19 @@ import { Balance } from './Balance'
 import { IncomeExpense } from './IncomeExpense'
 import { TransactionList } from './TransactionList'
 import { AddTrasnsaction } from './AddTrasnsaction'
-
-import { GlobalProvider } from '../../context'
+import Spinner from '../Template/Spinner'
 
 import './ExpenseTracker.css'
 
 function ExpenseTracker () {
     return (
-        <GlobalProvider>
-            <div className='expContainer'>
-                <Balance />
-                <IncomeExpense />
-                <TransactionList />
-                <AddTrasnsaction />
-            </div>
-        </GlobalProvider>
+        <div className='expContainer'>
+            <Spinner />
+            <Balance />
+            <IncomeExpense />
+            <TransactionList />
+            <AddTrasnsaction />
+        </div>
     );
 }
 

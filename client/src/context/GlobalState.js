@@ -19,6 +19,10 @@ export const GlobalProvider = ( { children } ) => {
     //Actions
     async function getTransactions() {
         try {
+            dispatch({
+                type: 'TRANSACTION_IN_PROGRESS',
+                payload: {loading: true}
+            });
             const res = await axios.get('api/v1/transactions');
             dispatch({
                 type: 'GET_TRANSACTIONS',
@@ -34,6 +38,10 @@ export const GlobalProvider = ( { children } ) => {
 
     async function deleteTransaction(id) {
         try {
+            dispatch({
+                type: 'TRANSACTION_IN_PROGRESS',
+                payload: {loading: true}
+            });
             await axios.delete(`/api/v1/transactions/${id}`);
             dispatch({
                 type: 'DELETE_TRANSACTION',
@@ -52,6 +60,10 @@ export const GlobalProvider = ( { children } ) => {
                 'Content-Type': 'application/json'
             }
         };
+        dispatch({
+            type: 'TRANSACTION_IN_PROGRESS',
+            payload: {loading: true}
+        });
         try {
             const res = await axios.post('/api/v1/transactions/', transaction, config);
             dispatch({

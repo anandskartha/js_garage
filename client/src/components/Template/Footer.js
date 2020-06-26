@@ -5,7 +5,7 @@ function Footer() {
     return (
         <footer>
             <p>
-                React Apps, Copyright &copy; 2020
+                Javascript Garage, Copyright &copy; 2020
             </p>
         </footer>
     )

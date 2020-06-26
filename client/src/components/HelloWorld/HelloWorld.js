@@ -19,9 +19,9 @@ class HelloWorld extends Component {
     }
     render() {
         return(
-            <div className="HelloWorld">
-                <span className="boxclose" id="boxclose" onClick={this.removeGreeting} />
-                <h3>Important message</h3>
+            <div className="round-edge-box">
+                <span className="box-close" id="boxclose" onClick={this.removeGreeting} />
+                <h3>Information</h3>
                 {this.state.greeting} {this.props.name}!
                 <br/>
                 <button onClick={this.frenchify}>Frenchify!</button>

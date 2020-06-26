@@ -1,12 +1,12 @@
 import React from 'react'
 import './Showcase.css';
 
-function Showcase() {
+function Showcase(props) {
     return (
         <section id="showcase">
             <div className="container">
-                <h1>Amazing React Applications</h1>
-                <p>React is a JavaScript library for building user interfaces with a community of millions of developers working day and night to make application developers' life easy.</p>
+            <h1>{props.header}</h1>
+                <p>{props.content}</p>
             </div>
             
         </section>
