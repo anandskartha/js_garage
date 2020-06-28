@@ -1,8 +1,8 @@
 import React, { useState, useContext } from 'react'
-import { GlobalContext } from '../../context'
+import { TransactionContext } from '../../context'
 
 export function AddTrasnsaction() {
-    const { addTransaction } = useContext (GlobalContext)
+    const { addTransaction } = useContext (TransactionContext)
     const [text, setText] = useState('')
     const [amount, setAmount] = useState(0)
 
@@ -13,6 +13,8 @@ export function AddTrasnsaction() {
             amount: +amount
         }
         addTransaction(newTransaction)
+        setText('');
+        setAmount(0);
     }
     return (
         <div>

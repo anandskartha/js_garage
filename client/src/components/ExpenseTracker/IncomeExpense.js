@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
-import { GlobalContext } from '../../context'
+import { TransactionContext } from '../../context'
 import { amountFormatter } from '../../utils'
 
 export function IncomeExpense() {
-    const { transactions } = useContext (GlobalContext)
+    const { transactions } = useContext (TransactionContext)
     const amounts = transactions.map(transaction => transaction.amount)
     const income = amounts
         .filter(item => item > 0)

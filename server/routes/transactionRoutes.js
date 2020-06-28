@@ -4,6 +4,7 @@ const { getTransactions, addTransaction, deleteTransaction } = require('../contr
 
 router.route('/')
     .get(getTransactions)
+    .get((req,res) => {res.send('hello')}) //test this
     .post(addTransaction);
 
 router.route('/:id')

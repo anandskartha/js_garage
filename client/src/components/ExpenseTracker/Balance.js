@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
-import { GlobalContext } from '../../context'
+import { TransactionContext } from '../../context'
 import { amountFormatter } from '../../utils';
 
 export const Balance = () => {
-    const { transactions } = useContext(GlobalContext)
+    const { transactions } = useContext(TransactionContext)
     const amounts = transactions.map(transaction => transaction.amount)
     const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2)
     return (

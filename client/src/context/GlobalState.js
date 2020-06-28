@@ -1,91 +1,46 @@
 import React, { createContext, useReducer } from 'react'
-import axios from 'axios';
-import AppReducer from './AppReducer'
+import { AppReducer } from './Reducer'
 
 //Initial state
 const initialState = {
-    transactions: [],
-    error: null,
-    loading: true
+    err: null,
+    showError: false,
+    showInProgress: false
 };
 
-//Create context
+//Create a Global context
 export const GlobalContext = createContext(initialState)
 
-//Provider Component
+//Global Provider Component
 export const GlobalProvider = ( { children } ) => {
     const [state, dispatch] = useReducer(AppReducer, initialState)
 
     //Actions
-    async function getTransactions() {
-        try {
-            dispatch({
-                type: 'TRANSACTION_IN_PROGRESS',
-                payload: {loading: true}
-            });
-            const res = await axios.get('api/v1/transactions');
-            dispatch({
-                type: 'GET_TRANSACTIONS',
-                payload: res.data.data
-            });
-        } catch(err) {
-            dispatch({
-                type: 'TRANSACTION_ERROR',
-                payload: err.response.data.error
-            });
-        }
-    }
-
-    async function deleteTransaction(id) {
-        try {
-            dispatch({
-                type: 'TRANSACTION_IN_PROGRESS',
-                payload: {loading: true}
-            });
-            await axios.delete(`/api/v1/transactions/${id}`);
-            dispatch({
-                type: 'DELETE_TRANSACTION',
-                payload: id
-            })
-        } catch (err) {
-            dispatch({
-                type: 'TRANSACTION_ERROR',
-                payload: err.response.data.error
-            });
-        }
-    }
-    async function addTransaction(transaction) {
-        const config = {
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        };
+    function setProgress(showInProgress) {
         dispatch({
-            type: 'TRANSACTION_IN_PROGRESS',
-            payload: {loading: true}
+            type: 'IN_PROGRESS',
+            payload: {
+                showInProgress
+            }
         });
-        try {
-            const res = await axios.post('/api/v1/transactions/', transaction, config);
-            dispatch({
-                type: 'ADD_TRANSACTION',
-                payload: res.data.data
-            })
-        } catch (err) {
-            dispatch({
-                type: 'TRANSACTION_ERROR',
-                payload: err.response.data.error
-            });
-        }
+    }
+    function setError(err, showError) {
+        dispatch({
+            type: 'ERROR',
+            payload: {
+                err,
+                showError
+            }
+        });
     }
 
     return (
         <GlobalContext.Provider value={{
-            transactions: state.transactions,
+            showError: state.showError,
+            showInProgress: state.showInProgress,
             error: state.error,
-            loading: state.loading,
-            getTransactions,
-            deleteTransaction,
-            addTransaction
+            setProgress,
+            setError
         }}>
             { children }
         </GlobalContext.Provider>

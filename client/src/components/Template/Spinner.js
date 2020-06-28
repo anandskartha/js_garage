@@ -1,14 +1,13 @@
 import React, {useContext} from 'react'
 import './Spinner.css'
 
-import { GlobalContext } from '../../context/GlobalState'
+import { GlobalContext } from '../../context'
 
 function Spinner() {
-    const {loading} = useContext(GlobalContext)
-    const spinnerClassName = loading? "spin-wrapper" : "spin-wrapper hidden"
-    //const spinnerClassName = loading? "spin-wrapper" : "spin-wrapper"
+    const {showInProgress} = useContext(GlobalContext)
+    const overlayClass = showInProgress? "overlay" : "overlay hidden"
     return (
-        <div className={spinnerClassName}>
+        <div className={overlayClass}>
             <div className="spinner" />
         </div>
     )

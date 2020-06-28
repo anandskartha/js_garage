@@ -5,6 +5,8 @@ import HomeContent from '../Template/HomeContent';
 import Footer from '../Template/Footer';
 import NavLink from '../Template/NavLink';
 import Sidebar from '../Template/Sidebar';
+import Spinner from '../Template/Spinner'
+import Dialog from '../Template/Dialog'
 
 import HelloWorld from '../HelloWorld';
 import TodoListApp from '../TodoListApp';
@@ -58,6 +60,8 @@ class App extends React.Component {
                                 </Route>
                             </Switch>
                         <Footer/>
+                        <Spinner />
+                        <Dialog />
                     </Router>
             </GlobalProvider>
         );

@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
-import {GlobalContext} from '../../context'
+import {TransactionContext} from '../../context'
 import { amountFormatter } from '../../utils'
 
 export function Transaction({ transaction }) {
-    const { deleteTransaction } = useContext(GlobalContext)
+    const { deleteTransaction } = useContext(TransactionContext)
     const sign = transaction.amount < 0 ? '-' : '+'
     return (
         <li className={transaction.amount < 0 ? 'minus' : 'plus'}>

@@ -1,9 +1,9 @@
 import React, { useContext, useEffect } from 'react'
-import { GlobalContext } from '../../context'
+import { TransactionContext } from '../../context'
 import { Transaction } from './Transaction'
 
 export function TransactionList() {
-    const { transactions, getTransactions } = useContext(GlobalContext);
+    const { transactions, getTransactions } = useContext(TransactionContext);
     useEffect(() => {
         getTransactions();
         // eslint-disable-next-line
