@@ -9,7 +9,6 @@ function Dialog(props) {
     return (
         <div className={overlayClass}>
             <div className="dialog" >
-                <span className="dialog-close" id="dialogClose" onClick={ () => setError(null, false) } />
                 <h3>ERROR</h3>
                 Something went wrong. Please contact the administrator if the issue persists.
                 <br/>

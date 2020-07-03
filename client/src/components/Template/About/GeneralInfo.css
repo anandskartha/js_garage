@@ -1,0 +1,13 @@
+div.info {
+    margin: 10px;
+    max-width: 50%;
+    float: left;
+}
+
+@media (max-width: 768px) {
+    div.info {
+      max-width: 100%;
+      display: block;
+      float: none;
+    }
+  }

@@ -11,6 +11,7 @@ import Dialog from '../Template/Dialog'
 import HelloWorld from '../HelloWorld';
 import TodoListApp from '../TodoListApp';
 import ExpenseTracker from '../ExpenseTracker';
+import About from '../Template/About';
 
 import { GlobalProvider } from '../../context'
 
@@ -31,6 +32,7 @@ class App extends React.Component {
                                         <li><NavLink to="/helloWorld" label="HelloW"/></li>
                                         <li><NavLink to="/todoApp" label="TodoR" /></li>
                                         <li><NavLink to="/expenseTracker" label="Expenser"/></li>
+                                        <li><NavLink to="/about" label="About"/></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -56,6 +58,11 @@ class App extends React.Component {
                                     <div className="main-content">
                                         <ExpenseTracker />
                                         <Sidebar title="Expense Tracker" content="Want to keep track of all your incomes and expenses? This utility uses React Context and Hooks which is a combination that gives developers ability to manage and share application level states among components like the way they do in Redux. We can manage a shared state among components without being passed it to child components as props." />
+                                    </div>
+                                </Route>
+                                <Route exact path='/about'>
+                                    <div className="main-content">
+                                        <About />
                                     </div>
                                 </Route>
                             </Switch>

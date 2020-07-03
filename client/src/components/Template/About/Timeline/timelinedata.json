@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "title": "Freelancer",
+        "period": "2013 - present",
+        "content": "Quisque non sem egestas sem pharetra tincidunt sed et purus. Morbi in maximus dui. Vestibulum vulputate dui euismod, dignissim nulla vitae, posuere purus. Etiam dictum id libero a molestie. Suspendisse potenti. Integer ac lacus lobortis, faucibus ex et, vehicula mauris. Maecenas in nunc quis ex eleifend tincidunt sit amet eu ligula. Etiam pharetra justo justo, vitae lacinia eros dignissim mattis.",
+        "direction": "right"
+    },
+    {
+        "id": 2,
+        "title": "Apple Inc.",
+        "period": "2011 - 2013",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu est urna. Sed dolor tellus, rutrum a vestibulum in, euismod at justo. Maecenas dui leo, varius sit amet lacus vitae, fermentum condimentum tellus. Fusce at varius sapien.",
+        "direction": "left"
+    },
+    {
+        "id": 3,
+        "title": "Harvard University",
+        "period": "2008 - 2011",
+        "content": "A description of all the lectures and courses I have taken and my final degree.",
+        "direction": "right"
+    }
+]

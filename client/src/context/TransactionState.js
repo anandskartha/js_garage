@@ -67,12 +67,33 @@ export const TransactionProvider = ( { children } ) => {
         }
     }
 
+    async function editTransaction(transaction) {
+        const config = {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        };
+        setProgress(true);
+        try {
+            await axios.put(`/api/v1/transactions/${transaction._id}`, transaction, config);
+            // dispatch({
+            //     type: 'EDIT_TRANSACTION',
+            //     payload: res.data.data
+            // })
+        } catch (err) {
+            setError(err, true);
+        } finally {
+            setProgress(false);
+        }
+    }
+
     return (
         <TransactionContext.Provider value={{
             transactions: state.transactions,
             getTransactions,
             deleteTransaction,
-            addTransaction
+            addTransaction,
+            editTransaction
         }}>
             { children }
         </TransactionContext.Provider>

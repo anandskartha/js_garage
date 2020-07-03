@@ -39,7 +39,7 @@ header{
 header li{
     float: left;
     display: inline;
-    padding: 0 20px 0 20px;
+    margin: 0 1px;
 }
 header #branding{
     float: left;
@@ -49,19 +49,16 @@ header #branding h1{
 }
 header nav{
     float: right;
-    margin-top: 10px;
+    margin-top: 32px;
 }
 header .highlight{
     color: #61DBFB;
     font-weight: bold;
 }
-header a:hover{
-    color:#ffffff;
-    font-weight: bold;
-}
+
 .btn {
     cursor: pointer;
-    background-color: #EF7777;
+    background-color: #ff5050;
     box-shadow: var(--box-shadow);
     color: #fff;
     border: 0;
@@ -71,11 +68,24 @@ header a:hover{
     padding: 10px;
     width: 100%;
 }
+.btn.disabled,
+.btn.disabled:hover {
+    cursor: default;
+    background-color: #fc9898;
+}
 .btn:hover{
     background: #FE6868;
 }
 .btn:active{
     background: #E38383;
+}
+textarea.error,
+input.error {
+    border: 1px solid #ff0000 !important;
+}
+
+div.container-border{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
 span.box-close{

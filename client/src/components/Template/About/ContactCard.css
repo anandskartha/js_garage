@@ -1,0 +1,28 @@
+ 
+  div.card {
+    margin: 10px;
+    max-width: 40%;
+    float: right;
+  }
+  div.card img {
+    width: 100%;
+  }
+  
+  div.card div.container {
+    padding: 0 15px;
+  }
+
+  p.title {
+    color: #808080;
+  }
+  
+  @media (max-width: 768px) {
+    div.card {
+      max-width: 100%;
+      display: block;
+      float: none;
+    }
+    div.card div.container {
+        padding: 0;
+      }
+  }
