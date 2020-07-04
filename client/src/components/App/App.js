@@ -8,7 +8,6 @@ import Sidebar from '../Template/Sidebar';
 import Spinner from '../Template/Spinner'
 import Dialog from '../Template/Dialog'
 
-import HelloWorld from '../HelloWorld';
 import TodoListApp from '../TodoListApp';
 import ExpenseTracker from '../ExpenseTracker';
 import About from '../Template/About';
@@ -25,11 +24,10 @@ class App extends React.Component {
                         <header>
                             <div className="container">
                                 <div id="branding">
-                                <Link to="/"><h1><span className="highlight">Javascript</span> Garage</h1></Link>
+                                <Link to="/"><h1><span className="highlight">JS</span>penser</h1></Link>
                                 </div>
                                 <nav>
                                     <ul>
-                                        <li><NavLink to="/helloWorld" label="HelloW"/></li>
                                         <li><NavLink to="/todoApp" label="TodoR" /></li>
                                         <li><NavLink to="/expenseTracker" label="Expenser"/></li>
                                         <li><NavLink to="/about" label="About"/></li>
@@ -39,14 +37,8 @@ class App extends React.Component {
                         </header>
                             <Switch>
                                 <Route exact path='/'>
-                                    <Showcase header="Amazing Garage Applications" content="Dive into some of the applications and utilities I developed using the most common web development frameworks. These are not my best, but I just want to show off my work to the world. Have fun!"/>
+                                    <Showcase header="Javascript Applications" content="Checkout a few sample applications and utilities I developed using some of the most popular web development frameworks. These are not my best, but I just want to show off my work to the world. Have fun and tell me what you think!"/>
                                     <HomeContent/>
-                                </Route>
-                                <Route exact path='/helloWorld'>
-                                    <div className="main-content">
-                                        <HelloWorld />
-                                        <Sidebar title="Hello World App" content="A simple Hello World Application using React class components and props. The component uses Express server with MongoDB." />
-                                    </div>
                                 </Route>
                                 <Route exact path='/todoApp'>
                                     <div className="main-content">

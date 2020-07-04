@@ -4,7 +4,7 @@ const { getTransactions, addTransaction, editTransaction, deleteTransaction } = 
 
 router.route('/')
     .get(getTransactions)
-    .get((req,res) => {res.send('hello')}) //test this
+    //.get((req,res) => {res.send('hello')}) //test this
     .post(addTransaction);
 
 router.route('/:id')

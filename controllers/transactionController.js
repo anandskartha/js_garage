@@ -1,4 +1,3 @@
-
 const Transaction = require('../models/Transaction');
 // @desc    Get all transactions
 // @route   GET /api/v1/transactions

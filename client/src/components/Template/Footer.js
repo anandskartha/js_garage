@@ -5,7 +5,7 @@ function Footer() {
     return (
         <footer>
             <p>
-                Javascript Garage, Copyright &copy; 2020
+                Jspenser, Copyright &copy; 2020
             </p>
         </footer>
     )
