@@ -2,7 +2,7 @@ import React from 'react'
 import { Balance } from './Balance'
 import { IncomeExpense } from './IncomeExpense'
 import { TransactionList } from './TransactionList'
-import { AddTrasnsaction } from './AddTrasnsaction'
+import { AddTransaction } from './AddTransaction'
 
 import { TransactionProvider } from '../../context'
 
@@ -15,7 +15,7 @@ function ExpenseTracker () {
                 <Balance />
                 <IncomeExpense />
                 <TransactionList />
-                <AddTrasnsaction />
+                <AddTransaction />
             </div>
         </TransactionProvider>
     );

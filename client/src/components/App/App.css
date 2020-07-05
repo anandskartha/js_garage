@@ -1,4 +1,27 @@
 /*Global*/
+*, *::before, *::after {
+    box-sizing: content-box !important;
+}
+a.unlink {
+    color: inherit !important;
+    text-decoration: none;
+}
+a.unlink:hover {
+    color: inherit!important;
+    text-decoration: none;
+}
+.a-unstyled {
+    &,
+    &:link,
+    &:visited,
+    &:hover,
+    &:active,
+    &:active:hover {
+      color: inherit;
+      text-decoration: none;
+    }
+}
+  
 #root {
     position: relative;
     width: 100%;
@@ -56,7 +79,7 @@ header .highlight{
     font-weight: bold;
 }
 
-.btn {
+.btn-default {
     cursor: pointer;
     background-color: #ff5050;
     box-shadow: var(--box-shadow);
@@ -68,17 +91,18 @@ header .highlight{
     padding: 10px;
     width: 100%;
 }
-.btn.disabled,
-.btn.disabled:hover {
+.btn-default.disabled,
+.btn-default.disabled:hover {
     cursor: default;
     background-color: #fc9898;
 }
-.btn:hover{
+.btn-default:hover{
     background: #FE6868;
 }
-.btn:active{
+.btn-default:active{
     background: #E38383;
 }
+
 textarea.error,
 input.error {
     border: 1px solid #ff0000 !important;
@@ -114,31 +138,6 @@ span.box-close:active{
     content: "×";
 }
 div.round-edge-box:hover span.box-close {
-    opacity: 1;
-}
-.delete-btn {
-    cursor: pointer;
-    background-color: #EF7777;
-    border: 0;
-    color: #fff;
-    font-size: 20px;
-    line-height: 20px;
-    padding: 0px 4px 2px 4px;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(-100%, -50%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-.delete-btn:hover {
-    background-color: #FE6868;
-}
-.delete-btn:active {
-    background-color: #E38383;
-}
-
-.list li:hover .delete-btn {
     opacity: 1;
 }
 

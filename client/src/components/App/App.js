@@ -15,6 +15,7 @@ import About from '../Template/About';
 import { GlobalProvider } from '../../context'
 
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
 
 class App extends React.Component {
     render() {
@@ -24,7 +25,7 @@ class App extends React.Component {
                         <header>
                             <div className="container">
                                 <div id="branding">
-                                <Link to="/"><h1><span className="highlight">JS</span>penser</h1></Link>
+                                <Link to="/" className=" unlink"><h1><span className="highlight">JS</span>penser</h1></Link>
                                 </div>
                                 <nav>
                                     <ul>

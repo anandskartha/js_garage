@@ -12,7 +12,7 @@ function Dialog(props) {
                 <h3>ERROR</h3>
                 Something went wrong. Please contact the administrator if the issue persists.
                 <br/>
-                <button className="btn" onClick={ () => setError(null, false) }>Ok</button>
+                <button className="btn-default" onClick={ () => setError(null, false) }>Ok</button>
             </div>
         </div>
     )

@@ -56,7 +56,7 @@ function Contact() {
             <textarea className={message.error? 'error' : ''} value={message.value} onChange={(e) => setMessage({
                 value: e.target.value, error: false
             })} placeholder="Message" maxLength="200" rows="7"/>
-            <button className="btn" onClick={onSubmit}>Send</button>
+            <button className="btn-default" onClick={onSubmit}>Send</button>
         </div>
     )
 }

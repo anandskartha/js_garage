@@ -16,4 +16,5 @@ header .current a{
 header nav a:hover{
     color: #fff;
     border-bottom: 3px solid #ff5050;
+    text-decoration: none;
 }

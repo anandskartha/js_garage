@@ -47,7 +47,7 @@
 .overlay .dialog span.dialog-close:before {
     content: "×";
 }
-.overlay .dialog button.btn{
+.overlay .dialog button.btn-default{
     margin-top: 20px;
     width: 20%;
 }

@@ -20,13 +20,12 @@
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box;
 }
 
 .contact-container p.title {
     color: #808080;
   }
-  .contact-container .btn {
+  .contact-container .btn-default {
       max-width: 30%;
       margin-left: 35%;
   }

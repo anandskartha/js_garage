@@ -9,7 +9,7 @@ function NavLink({ label, to, activeOnlyWhenExact }) {
       });
     return (
         <span className={match? "current" : ""}>
-            <Link to={to}>{label}</Link>
+            <Link className="a-unstyled" to={to}>{label}</Link>
         </span>
     )
 }
