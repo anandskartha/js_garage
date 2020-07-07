@@ -1,8 +1,11 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useContext} from 'react'
+import axios from 'axios'
+import { GlobalContext } from '../../../context/GlobalState'
+
 import './Contact.css'
 
 function Contact() {
-    //const { sendMessage } = useContext (TransactionContext)
+    const { setProgress, setError } = useContext(GlobalContext)
     const [name, setName] = useState({
         value: '',
         error: false
@@ -15,19 +18,34 @@ function Contact() {
         value: 'Hi, I am a talent hunter / recruiter / business owner. I am interested to hire / collaborate / consult with you. So, will you be interested?',
         error: false
     })
-    useEffect(() => {
-        console.log('In Useeffect')
-    })
+    const sendMessage = async (newMessage) => {
+        const config = {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        };
+        setProgress(true);
+        try {
+            const res = await axios.post('/api/v1/messages/', newMessage, config);
+            if(res.data.success === true) {
+                setName({value: '', error: false})
+                setEmail({value: '', error: false})
+                setMessage({value: '', error: false})
+            }
+        } catch (err) {
+            setError(err, true);
+        } finally {
+            setProgress(false);
+        }
+    }
     const onSubmit = () => {
-        // const newContact = {
-        //     name,
-        //     email,
-        //     message
-        // }
-        //sendMessage(newContact)
+        const newMessage = {
+            name: name.value,
+            email: email.value,
+            message: message.value
+        }
         if(validateInputs()) {
-
-            return;
+            sendMessage(newMessage)
         }
     }
     const validateInputs = () => {
@@ -45,7 +63,7 @@ function Contact() {
     
     return (
         <div className="contact-container container-border">
-            <h3>Get in Touch</h3>
+            <h3><i className="fa fa-send"/> Get in Touch</h3>
             <p className="title">Please fill out the form and I will be in touch with you at the earliest.</p>
             <input className={name.error? 'error' : ''} type="text" value={name.value} onChange={(e) => setName({ 
                 value: e.target.value, error: false 

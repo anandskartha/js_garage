@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 const morgan = require('morgan');
 const colors = require('colors');
 const transactions = require('./routes/transactionRoutes');
+const messages = require('./routes/messageRoutes');
 const connectDB =  require('./config/db');
 
 dotenv.config({
@@ -20,6 +21,7 @@ if(process.env.NODE_ENV === 'development') {
 }
 
 app.use('/api/v1/transactions', transactions);
+app.use('/api/v1/messages', messages);
 
 if(process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));

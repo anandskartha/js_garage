@@ -10,8 +10,9 @@ function ContactCard() {
             <div className="container">
                 <h2>Anand Sasidharan</h2>
                 <p className="title">Javascript Developer</p>
-                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                <p>anand@email.com</p>
+                <p>React | Angular 1.0 | Node | Express | Mongodb | ES6 | ES5</p>
+                <p><i className="fa fa-envelope" style={{color:"#B23121"}}/> anands.kartha@gmail.com</p>
+                <p><i className="fa fa-linkedin-square" style={{color:"#0e76a8"}}/> <a href="https://www.linkedin.com/in/anand-s-kartha/"  target="_blank" rel="noopener noreferrer">anand-s-kartha</a></p>
             </div>
         </div>
     )

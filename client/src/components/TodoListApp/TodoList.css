@@ -1,7 +1,7 @@
 div.todo-list {
     background-color: white;
     margin: 20px auto auto auto;
-    width: 65%;
+    width: 60%;
     float: left;
     display: flex;
     flex-direction: column;

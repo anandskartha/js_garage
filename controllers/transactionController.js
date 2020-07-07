@@ -1,4 +1,5 @@
 const Transaction = require('../models/Transaction');
+
 // @desc    Get all transactions
 // @route   GET /api/v1/transactions
 // @access  Public
@@ -41,7 +42,7 @@ exports.addTransaction = async (req, res, next) => {
         } else {
             return res.status(500).json({
                 success: false,
-                error: `Server Error ${err}`
+                error: `Server Error: ${err}`
             });
         }
     }

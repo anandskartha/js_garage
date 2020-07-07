@@ -50,7 +50,7 @@ export function Transaction({ transaction }) {
             <input type="text" className={editText? '' : 'hidden'} value={transactionState.text} onChange={(e) => setTransactionState({...transactionState, text: e.target.value})} onBlur={(e) => editTransactionHandler(e.target.value, {type: 'text'})} placeholder="Text" />
             <span className={editAmount? 'hidden' : ''} onDoubleClick={(e) => setEditAmount(true)}>{sign} ${amountFormatter(Math.abs(transactionState.amount))}</span>
             <input type="text" className={editAmount? '' : 'hidden'} value={transactionState.amount} onChange={(e) => setTransactionState({...transactionState, amount: e.target.value})} onBlur={(e) => editTransactionHandler(e.target.value, {type: 'amount'})} placeholder="Text" />
-            <button type="button" className="btn btn-danger btn-right" onClick={() => deleteTransaction(transaction._id)}><i class="fa fa-minus"></i></button>
+            <button type="button" className="btn btn-danger btn-right" onClick={() => deleteTransaction(transaction._id)}><i class="fa fa-minus" /></button>
         </li>
     )
 }

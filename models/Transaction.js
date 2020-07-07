@@ -16,4 +16,6 @@ const TransactionSchema = new mongoose.Schema({
     }
 });
 
+//https://mongoosejs.com/docs/models.html
+
 module.exports = mongoose.model('Transaction', TransactionSchema);
