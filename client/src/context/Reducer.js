@@ -25,11 +25,14 @@ export function TransactionReducer (state, action) {
 
 export function AppReducer (state, action) {
     switch(action.type) {
-        case 'ERROR':
+        case 'SHOWALERT':
             return {
                 ...state,
-                err: action.payload.err,
-                showError: action.payload.showError
+                alert: {
+                    visible: action.payload.visible,
+                    message: action.payload.message || '',
+                    type: action.payload.type || ''
+                }
             }
         case 'IN_PROGRESS':
             return {

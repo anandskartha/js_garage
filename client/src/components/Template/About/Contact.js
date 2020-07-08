@@ -5,7 +5,7 @@ import { GlobalContext } from '../../../context/GlobalState'
 import './Contact.css'
 
 function Contact() {
-    const { setProgress, setError } = useContext(GlobalContext)
+    const { setProgress, showAlert } = useContext(GlobalContext)
     const [name, setName] = useState({
         value: '',
         error: false
@@ -31,9 +31,18 @@ function Contact() {
                 setName({value: '', error: false})
                 setEmail({value: '', error: false})
                 setMessage({value: '', error: false})
+                showAlert({
+                    visible: true,
+                    message: 'Thank you for the interest. I will get back to you as soon as I can.',
+                    type: 'Information'
+                });
             }
         } catch (err) {
-            setError(err, true);
+            showAlert({
+                visible: true,
+                message: 'Something went wrong. Please contact the administrator if the issue persists.',
+                type: 'ERROR'
+            });
         } finally {
             setProgress(false);
         }

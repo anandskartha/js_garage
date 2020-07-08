@@ -21,7 +21,7 @@ export function AddTransaction() {
             <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="Add new transaction..." />
             <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Amount" />
             <button type="button" className="btn btn-primary btn-right" onClick={onSubmit}>
-                <i class="fa fa-plus" /> Add
+                <i className="fa fa-plus" /> Add
             </button>
         </div>
     )

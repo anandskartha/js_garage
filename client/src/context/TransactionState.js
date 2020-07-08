@@ -1,6 +1,6 @@
 import React, { createContext, useReducer, useContext } from 'react'
 import axios from 'axios'
-import {TransactionReducer} from './Reducer'
+import { TransactionReducer } from './Reducer'
 
 import { GlobalContext } from './GlobalState'
 
@@ -13,9 +13,9 @@ const initialState = {
 export const TransactionContext = createContext(initialState)
 
 //Global Provider Component
-export const TransactionProvider = ( { children } ) => {
+export const TransactionProvider = ({ children }) => {
     const [state, dispatch] = useReducer(TransactionReducer, initialState)
-    const { setProgress, setError } = useContext(GlobalContext)
+    const { setProgress, showAlert } = useContext(GlobalContext)
 
     //Actions
     async function getTransactions() {
@@ -26,8 +26,12 @@ export const TransactionProvider = ( { children } ) => {
                 type: 'GET_TRANSACTIONS',
                 payload: res.data.data
             });
-        } catch(err) {
-            setError(err, true);
+        } catch (err) {
+            showAlert({
+                visible: true,
+                message: 'Something went wrong. Please contact the administrator if the issue persists.',
+                type: 'ERROR'
+            });
         } finally {
             setProgress(false);
         }
@@ -42,7 +46,11 @@ export const TransactionProvider = ( { children } ) => {
                 payload: id
             })
         } catch (err) {
-            setError(err, true);
+            showAlert({
+                visible: true,
+                message: 'Something went wrong. Please contact the administrator if the issue persists.',
+                type: 'ERROR'
+            });
         } finally {
             setProgress(false);
         }
@@ -61,7 +69,11 @@ export const TransactionProvider = ( { children } ) => {
                 payload: res.data.data
             })
         } catch (err) {
-            setError(err, true);
+            showAlert({
+                visible: true,
+                message: 'Something went wrong. Please contact the administrator if the issue persists.',
+                type: 'ERROR'
+            });
         } finally {
             setProgress(false);
         }
@@ -81,7 +93,11 @@ export const TransactionProvider = ( { children } ) => {
             //     payload: res.data.data
             // })
         } catch (err) {
-            setError(err, true);
+            showAlert({
+                visible: true,
+                message: 'Something went wrong. Please contact the administrator if the issue persists.',
+                type: 'ERROR'
+            });
         } finally {
             setProgress(false);
         }
@@ -95,7 +111,7 @@ export const TransactionProvider = ( { children } ) => {
             addTransaction,
             editTransaction
         }}>
-            { children }
+            {children}
         </TransactionContext.Provider>
     )
 }

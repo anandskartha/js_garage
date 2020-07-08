@@ -3,8 +3,11 @@ import { AppReducer } from './Reducer'
 
 //Initial state
 const initialState = {
-    err: null,
-    showError: false,
+    alert: {
+        visible: false,
+        type: '',
+        message: ''
+    },
     showInProgress: false
 };
 
@@ -24,23 +27,24 @@ export const GlobalProvider = ( { children } ) => {
             }
         });
     }
-    function setError(err, showError) {
+    function showAlert({visible, type, message}) {
         dispatch({
-            type: 'ERROR',
+            type: 'SHOWALERT',
             payload: {
-                err,
-                showError
+                visible,
+                type,
+                message
             }
         });
     }
 
     return (
         <GlobalContext.Provider value={{
-            showError: state.showError,
+            alert: state.alert,
             showInProgress: state.showInProgress,
             error: state.error,
             setProgress,
-            setError
+            showAlert
         }}>
             { children }
         </GlobalContext.Provider>
