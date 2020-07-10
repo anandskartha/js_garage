@@ -18,6 +18,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 class App extends React.Component {
+    //<li><button onClick={() => alert('LOGIN')}>Login</button></li>
     render() {
         return (
             <GlobalProvider>
@@ -25,7 +26,7 @@ class App extends React.Component {
                         <header>
                             <div className="container">
                                 <div id="branding">
-                                <Link to="/" className=" unlink"><h1><span className="highlight">JS</span>penser</h1></Link>
+                                <Link to="/" className="unlink"><h1><span className="highlight">JS</span>penser</h1></Link>
                                 </div>
                                 <nav>
                                     <ul>

@@ -3,35 +3,35 @@
         "id": 1,
         "title": "Oracle Corporation",
         "period": "2016 - present",
-        "content": "Working on a powerful tool for Global Project Management in Construction & Engineering domain. Along with this flagship product, I am part of other web based applications of the same unit. All these apps are using the latest javacript technologies including React, Node.js & Express, Mongoose, ES6 with babel & webpack and ES5 with grunt & Require.",
+        "content": "Working on a powerful tool for Global Project Management in Construction & Engineering domain. Along with this flagship product, I am part of other web based applications in the same unit. All these apps are using the latest Javacript technologies, including React, Node.js & Express, Mongoose, ES6 with babel & webpack and ES5 with grunt & Require.",
         "direction": "right"
     },
     {
         "id": 2,
         "title": "LTI - L&T",
         "period": "2015 - 2016",
-        "content": "Worked for a leading US based media client on a web based data analysis tool which enables ease of analysis to the financial parameters. We used MEAN stack with Angular 1, Mongodb, Express and Node for the development of this project.",
+        "content": "Worked for a leading US based media client on a web based data analysis tool which enables ease of analysis of the financial parameters. We used MEAN stack with Angular 1, Mongodb, Express and Node for the development of this project.",
         "direction": "left"
     },
     {
         "id": 3,
         "title": "Infosys",
         "period": "2011 - 2015",
-        "content": "I was part of project management web application which was developed in ES5 with requirejs in frontend and Node js in backend.",
+        "content": "I was part of teh project management web application which was developed in ES5 with requirejs in front-end and Node js in the backend.",
         "direction": "right"
     },
     {
         "id": 4,
         "title": "Amrita University",
         "period": "2008 - 2011",
-        "content": "Graduated my masters degree in Computer Applications with a CGPA of 9.19 out of 10. I was one of the top students with a University rank of 4. Just like in accademics, I excelled in other fields also. I was an active member of many students association activites and organisations.",
+        "content": "Graduated with my masters degree in Computer Applications with a CGPA of 9.19 out of 10. I was one of the top students with a University rank of 4. Just like in academics, I excelled in other fields also. I was an active member of many students association activities and organisations.",
         "direction": "left"
     },
     {
         "id": 5,
         "title": "Amrita University",
         "period": "2005 - 2008",
-        "content": "Under Graduate course- Bachelor of Science in Computer Science. I secured an 8.93 out of 10 and end up being the Uni second rank. That was a great learning time, met new people and had amazing life experiences.",
+        "content": "Under Graduate course- Bachelor of Science in Computer Science. I scored an 8.93 out of 10 and end up being the Uni second rank. That was a great learning time, met new people and had amazing life experiences.",
         "direction": "right"
     }
 ]
