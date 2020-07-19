@@ -1,6 +1,7 @@
 import React from 'react'
 import GeneralInfo from './GeneralInfo'
 import ContactCard from './ContactCard'
+import Carousel from './Carousel'
 import Timeline from './Timeline'
 import Contact from './Contact'
 
@@ -10,6 +11,9 @@ function index() {
             <div className="container">
                 <GeneralInfo />
                 <ContactCard />
+            </div>
+            <div className="container">
+                <Carousel />
             </div>
             <div className="container">
                 <Timeline />

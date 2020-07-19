@@ -1,6 +1,6 @@
 /*Global*/
 *, *::before, *::after {
-    box-sizing: content-box !important;
+    box-sizing: content-box;
 }
 a.unlink {
     color: inherit !important;
@@ -134,7 +134,7 @@ span.box-close:hover{
 span.box-close:active{
     background: #E38383;
   }
-.box-close:before {
+.box-close::before {
     content: "×";
 }
 div.round-edge-box:hover span.box-close {

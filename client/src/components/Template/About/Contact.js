@@ -15,7 +15,7 @@ function Contact() {
         error: false
     })
     const [message, setMessage] = useState({
-        value: 'Hi, I am a talent hunter / recruiter / business owner. I am interested to hire / collaborate / consult with you. So, will you be interested?',
+        value: 'Hi, I am a talent hunter / recruiter / business owner. I am interested in hiring you / collaborate / consult / partner with you. Contact me for more details.',
         error: false
     })
     const sendMessage = async (newMessage) => {

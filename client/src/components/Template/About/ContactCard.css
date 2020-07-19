@@ -1,6 +1,7 @@
  
   div.card {
     margin: 10px;
+    padding-right: 10px;
     max-width: 40%;
     float: right;
   }

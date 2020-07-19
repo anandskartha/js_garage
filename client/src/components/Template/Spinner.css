@@ -21,13 +21,13 @@
     border-radius: 50%;
     animation: spin 2s linear infinite;
 }
-.overlay .spinner:before, .overlay .spinner:after {
+.overlay .spinner::before, .overlay .spinner::after {
     content: "";
     position: absolute;
     border: 3px solid transparent;
     border-radius: 50%;
 }
-.overlay .spinner:before {
+.overlay .spinner::before {
     border-top-color: #61DBFB;
     top: -12px;
     left: -12px;
@@ -35,7 +35,7 @@
     bottom: -12px;
     animation: spin 3s linear infinite;
 }
-.overlay .spinner:after {
+.overlay .spinner::after {
     border-top-color: #ffffff;
     top: 6px;
     left: 6px;
