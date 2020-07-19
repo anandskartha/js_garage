@@ -91,6 +91,17 @@ header .highlight{
     padding: 10px;
     width: 100%;
 }
+.btn-default.btn-round {
+    width: 11%;
+    padding: 5px;
+    float: right;
+    margin-top: 0px;
+    border-radius: 15px;
+}
+span.more-dots {
+    font-weight: 800;
+}
+
 .btn-default.disabled,
 .btn-default.disabled:hover {
     cursor: default;

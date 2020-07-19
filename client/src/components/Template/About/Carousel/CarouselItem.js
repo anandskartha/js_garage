@@ -6,13 +6,13 @@ function CarouselItem({title, description, image, proficiency}) {
     const proficiencyMax = 5
     for (let i = 0; i < proficiencyMax; i++) {
         if (proficiency < 1 && proficiency > 0) {
-            proficiencyRating.push(<i className="fa fa-star-half-o" />)
+            proficiencyRating.push(<i key={i} className="fa fa-star-half-o" />)
             proficiency -= 1;
         } else if (proficiency > 0){
-            proficiencyRating.push(<i className="fa fa-star" />)
+            proficiencyRating.push(<i key={i} className="fa fa-star" />)
             proficiency -= 1;
         } else {
-            proficiencyRating.push(<i className="fa fa-star-o" />)
+            proficiencyRating.push(<i key={i} className="fa fa-star-o" />)
         }
     }
     

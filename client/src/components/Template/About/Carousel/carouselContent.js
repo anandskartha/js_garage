@@ -1,5 +1,6 @@
 import imgReact from '../../../../images/techs/react.jpg'
 import imgRedux from '../../../../images/techs/redux.jpg'
+import imgAngular from '../../../../images/techs/angular.jpg'
 import imgES6 from '../../../../images/techs/es6.jpg'
 import imgES5 from '../../../../images/techs/es5.jpg'
 import imgNode from '../../../../images/techs/node.jpg'
@@ -31,6 +32,13 @@ const carouselContent = [
         description: "Store, Reducer, Actions & Dispatching an action",
         image: imgRedux,
         proficiency: 3.5
+    },
+    {
+        id: 'angular',
+        title: "Angular 1.0",
+        description: "The front-end framework is used along with Node, Express and Mongoose (MEAN) stack",
+        image: imgAngular,
+        proficiency: 4
     },
     {
         id: 'es6',
