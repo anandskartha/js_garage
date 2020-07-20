@@ -33,11 +33,11 @@ function Timeline({directionStyle, title, period, content}) {
                 </div>
                 <div className="desc">
                     {timeline.content}
-                <p>
-                    <button onClick={() => toggleMore()} id="btnMore" className="btn-default btn-round" style={{display: showMoreButton? 'block' : 'none'}}>
-                        {timeline.shortContent ? <i className="fa fa-expand"/> : <i className="fa fa-compress"/>}
-                    </button>
-                </p>
+                    <p>
+                        <button onClick={() => toggleMore()} id="btnMore" className="btn-default btn-round" style={{display: showMoreButton? 'block' : 'none'}}>
+                            {timeline.shortContent ? <i className="fa fa-expand"/> : <i className="fa fa-compress"/>}
+                        </button>
+                    </p>
                 </div>
             </div>
         </li>

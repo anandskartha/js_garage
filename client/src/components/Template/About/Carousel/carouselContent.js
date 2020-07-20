@@ -3,6 +3,7 @@ import imgRedux from '../../../../images/techs/redux.jpg'
 import imgAngular from '../../../../images/techs/angular.jpg'
 import imgES6 from '../../../../images/techs/es6.jpg'
 import imgES5 from '../../../../images/techs/es5.jpg'
+import imgJquery from '../../../../images/techs/jquery.jpg'
 import imgNode from '../../../../images/techs/node.jpg'
 import imgExpress from '../../../../images/techs/express.jpg'
 import imgNPM from '../../../../images/techs/npm.jpg'
@@ -53,6 +54,13 @@ const carouselContent = [
         description: "Advanced concepts of object oriented and functional paradigms",
         image: imgES5,
         proficiency: 5
+    },
+    {
+        id: 'jquery',
+        title: "Jquery",
+        description: "Jquery is a reliable framework for extensive DOM manipulations",
+        image: imgJquery,
+        proficiency: 4
     },
     {
         id: 'nodejs',
