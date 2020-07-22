@@ -1,8 +1,9 @@
-import React, { useState, useContext } from 'react'
-import { TransactionContext } from '../../context'
+import React, { useState } from 'react'
+import propTypes from "prop-types";
+import { connect } from 'react-redux'
+import { addTransaction } from '../../store/actions/transactionActions'
 
-export function AddTransaction() {
-    const { addTransaction } = useContext (TransactionContext)
+function AddTransaction({ addTransaction }) {
     const [text, setText] = useState('')
     const [amount, setAmount] = useState(0)
 
@@ -26,3 +27,8 @@ export function AddTransaction() {
         </div>
     )
 }
+
+AddTransaction.propTypes = {
+    addTransaction: propTypes.func.isRequired
+}
+export default connect(null, { addTransaction })(AddTransaction)
