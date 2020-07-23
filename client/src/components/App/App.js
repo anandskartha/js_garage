@@ -12,7 +12,7 @@ import TodoListApp from '../TodoListApp';
 import ExpenseTracker from '../ExpenseTracker';
 import About from '../Template/About';
 
-import { GlobalProvider } from '../../context'
+import { AuthProvider } from '../../context'
 import { Provider } from 'react-redux'
 import store from '../../store'
 
@@ -26,7 +26,7 @@ class App extends React.Component {
         //The only way to change the state inside it is to dispatch an action on it
         return (
             <Provider store={store}>
-                <GlobalProvider>
+                <AuthProvider>
                         <Router>
                             <header>
                                 <div className="container">
@@ -69,7 +69,7 @@ class App extends React.Component {
                             <Spinner />
                             <Dialog />
                         </Router>
-                </GlobalProvider>
+                </AuthProvider>
             </Provider>
         );
     }

@@ -1,18 +1,22 @@
-export function AppReducer (state, action) {
+export function AuthReducer (state, action) {
     switch(action.type) {
-        case 'SHOWALERT':
+        case 'LOGGED_IN':
             return {
                 ...state,
-                alert: {
-                    visible: action.payload.visible,
-                    message: action.payload.message || '',
-                    type: action.payload.type || ''
+                user: {
+                    name: action.payload.name,
+                    type: action.payload.type || '',
+                    loggedInTime: action.payload.loggedInTime || ''
                 }
             }
-        case 'IN_PROGRESS':
+        case 'LOGGED_OUT':
             return {
                 ...state,
-                showInProgress: action.payload.showInProgress
+                user: {
+                    name: action.payload.visible,
+                    type: action.payload.message || '',
+                    loggedInTime: action.payload.type || ''
+                }
             }
         default:
             return state

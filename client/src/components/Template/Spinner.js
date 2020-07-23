@@ -1,10 +1,9 @@
-import React, {useContext} from 'react'
+import React from 'react'
+import { connect } from 'react-redux'
+import propTypes from 'prop-types'
 import './Spinner.css'
 
-import { GlobalContext } from '../../context'
-
-function Spinner() {
-    const {showInProgress} = useContext(GlobalContext)
+function Spinner({ showInProgress }) {
     const overlayClass = showInProgress? "overlay" : "overlay hidden"
     return (
         <div className={overlayClass}>
@@ -13,4 +12,11 @@ function Spinner() {
     )
 }
 
-export default Spinner
+Spinner.propTypes = {
+    showInProgress: propTypes.bool.isRequired
+}
+const mapStateToProps = (state) => ({
+    showInProgress: state.appState.showInProgress
+})
+
+export default connect(mapStateToProps, {})(Spinner)

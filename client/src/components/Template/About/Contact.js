@@ -1,11 +1,12 @@
-import React, {useState, useContext} from 'react'
+import React, {useState} from 'react'
 import axios from 'axios'
-import { GlobalContext } from '../../../context/GlobalState'
+import propTypes from 'prop-types'
+import { connect } from 'react-redux'
+import { setProgress, showAlert } from '../../../store/actions/appActions'
 
 import './Contact.css'
 
-function Contact() {
-    const { setProgress, showAlert } = useContext(GlobalContext)
+function Contact({ setProgress, showAlert }) {
     const [name, setName] = useState({
         value: '',
         error: false
@@ -88,4 +89,9 @@ function Contact() {
     )
 }
 
-export default Contact
+Contact.propTypes = {
+    setProgress: propTypes.func.isRequired,
+    showAlert: propTypes.func.isRequired,
+}
+
+export default connect(null, { setProgress, showAlert })(Contact)

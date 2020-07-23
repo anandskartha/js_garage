@@ -1,4 +1,4 @@
-import { GET_TRANSACTIONS, DELETE_TRANSACTION, ADD_TRANSACTION } from '../actions/types'
+import { GET_TRANSACTIONS, DELETE_TRANSACTION, ADD_TRANSACTION, EDIT_TRANSACTION } from '../actions/types'
 
 const initialState = {
     transactions: []
@@ -20,6 +20,12 @@ export default function TransactionReducer (state = initialState, action) {
             }
         case ADD_TRANSACTION:
             transactionStore = [...state.transactions, action.payload]
+            return {
+                transactions: transactionStore,
+                tCount: transactionStore.length
+            }
+        case EDIT_TRANSACTION:
+            transactionStore = [...state.transactions.filter(transaction => transaction._id !== action.payload._id), action.payload]
             return {
                 transactions: transactionStore,
                 tCount: transactionStore.length
