@@ -5,7 +5,7 @@ import Carousel from './Carousel'
 import Timeline from './Timeline'
 import Contact from './Contact'
 
-function index() {
+function index(props) {
     return (
         <>
             <div className="container">
@@ -18,7 +18,7 @@ function index() {
             <div className="container">
                 <Timeline />
             </div>
-            <div className="container">
+            <div className="container" ref={props.contactRef}>
                 <Contact />
             </div>
         </>

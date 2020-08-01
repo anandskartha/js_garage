@@ -24,6 +24,7 @@ class App extends React.Component {
     render() {
         //A Redux Store holds the whole state tree of the application
         //The only way to change the state inside it is to dispatch an action on it
+        const ref = React.createRef();
         return (
             <Provider store={store}>
                 <AuthProvider>
@@ -60,8 +61,9 @@ class App extends React.Component {
                                         </div>
                                     </Route>
                                     <Route exact path='/about'>
+                                        <Showcase header="A little bit about me" content="" btnTitle="Say Hi!" bgColor="#212121" btnClickAction={() => ref.current.scrollIntoView({behavior: 'smooth'})}/>
                                         <div className="main-content">
-                                            <About />
+                                            <About contactRef={ref}/>
                                         </div>
                                     </Route>
                                 </Switch>

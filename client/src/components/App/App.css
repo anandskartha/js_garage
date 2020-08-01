@@ -91,6 +91,11 @@ header .highlight{
     padding: 10px;
     width: 100%;
 }
+.btn-showcase {
+    width: 10%;
+    margin-left: 45%;
+    margin-top: 40px;
+}
 .btn-default.btn-round {
     width: 11%;
     padding: 5px;
@@ -163,5 +168,9 @@ div.round-edge-box:hover span.box-close {
     }
     header{
         padding-bottom: 20px;
+    }
+    .btn-showcase {
+        width: 20%;
+        margin-top: 0px;
     }
 }
