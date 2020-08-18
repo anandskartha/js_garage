@@ -7,6 +7,7 @@ import NavLink from '../Template/NavLink';
 import Sidebar from '../Template/Sidebar';
 import Spinner from '../Template/Spinner'
 import Dialog from '../Template/Dialog'
+import Login from '../Login'
 
 import TodoListApp from '../TodoListApp';
 import ExpenseTracker from '../ExpenseTracker';
@@ -20,7 +21,6 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 class App extends React.Component {
-    //<li><button onClick={() => alert('LOGIN')}>Login</button></li>
     render() {
         //A Redux Store holds the whole state tree of the application
         //The only way to change the state inside it is to dispatch an action on it
@@ -41,6 +41,7 @@ class App extends React.Component {
                                             <li><NavLink to="/about" label="About"/></li>
                                         </ul>
                                     </nav>
+                                    <Login/>
                                 </div>
                             </header>
                                 <Switch>

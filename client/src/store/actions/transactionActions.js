@@ -14,14 +14,13 @@ const showAlert = (dispatch, alertDetails) => {
     dispatch({
         type: SHOW_ALERT,
         payload: {
-            alertDetails
+            ...alertDetails
         }
     })
 }
 export function getTransactions() {
     return async function(dispatch, getState) {
         try {
-            //console.log(getState())
             setProgress(dispatch,true);
             const res = await axios.get('api/v1/transactions');
             dispatch({
@@ -29,6 +28,10 @@ export function getTransactions() {
                 payload: res.data.data
             });
         } catch (err) {
+            dispatch({
+                type: GET_TRANSACTIONS,
+                payload: []
+            });
             showAlert(dispatch, {
                 visible: true,
                 message: 'Something went wrong. Please contact the administrator if the issue persists.',

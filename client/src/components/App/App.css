@@ -71,7 +71,7 @@ header #branding h1{
     margin:0;
 }
 header nav{
-    float: right;
+    margin-left: 50%;
     margin-top: 32px;
 }
 header .highlight{
@@ -156,6 +156,20 @@ span.box-close:active{
 div.round-edge-box:hover span.box-close {
     opacity: 1;
 }
+div.login-space {
+    float: right;
+}
+div.login-space button {
+    background: none!important;
+    border: none;
+    padding: 0!important;
+    /*optional*/
+    font-family: arial, sans-serif;
+    /*input has OS specific font-family*/
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
 /*Media Query*/
 @media(max-width: 768px){
@@ -165,6 +179,7 @@ div.round-edge-box:hover span.box-close {
         float: none;
         text-align: center;
         width: 100%;
+        margin-left: 0px;
     }
     header{
         padding-bottom: 20px;
