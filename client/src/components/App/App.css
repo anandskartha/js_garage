@@ -71,7 +71,7 @@ header #branding h1{
     margin:0;
 }
 header nav{
-    margin-left: 50%;
+    float: right;
     margin-top: 32px;
 }
 header .highlight{
@@ -158,10 +158,12 @@ div.round-edge-box:hover span.box-close {
 }
 div.login-space {
     float: right;
+    margin-left: 20px;
 }
 div.login-space button {
     background: none!important;
     border: none;
+    outline:none;
     padding: 0!important;
     /*optional*/
     font-family: arial, sans-serif;
