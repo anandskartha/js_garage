@@ -1,9 +1,9 @@
-import React, { useContext } from 'react'
-import { TransactionContext } from '../../context'
+import React from 'react'
+import propTypes from "prop-types";
+import { connect } from 'react-redux'
 import { amountFormatter } from '../../utils'
 
-export function IncomeExpense() {
-    const { transactions } = useContext (TransactionContext)
+function IncomeExpense({ transactions }) {
     const amounts = transactions.map(transaction => transaction.amount)
     const income = amounts
         .filter(item => item > 0)
@@ -28,3 +28,10 @@ export function IncomeExpense() {
     )
 }
 
+IncomeExpense.propTypes = {
+    transactions: propTypes.array.isRequired
+}
+const mapStateToProps = state => ({
+    transactions: state.transactions.transactions
+})
+export default connect(mapStateToProps, {})(IncomeExpense)

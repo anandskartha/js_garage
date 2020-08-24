@@ -3,6 +3,8 @@ const path = require('path');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
 const colors = require('colors');
+const authentication = require('./routes/authenticationRoutes');
+const { verifyToken } = require('./controllers/authenticationController');
 const transactions = require('./routes/transactionRoutes');
 const messages = require('./routes/messageRoutes');
 const connectDB =  require('./config/db');
@@ -20,8 +22,9 @@ if(process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));
 }
 
-app.use('/api/v1/transactions', transactions);
-app.use('/api/v1/messages', messages);
+app.use('/api/v1/authenticate', authentication);
+app.use('/api/v1/transactions', verifyToken, transactions);
+app.use('/api/v1/messages',verifyToken, messages);
 
 if(process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));

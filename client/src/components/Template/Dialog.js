@@ -1,10 +1,10 @@
-import React, { useContext } from 'react'
+import React from 'react'
+import propTypes from 'prop-types'
+import { connect } from 'react-redux'
+import { showAlert } from '../../store/actions/appActions'
 import './Dialog.css'
 
-import { GlobalContext } from '../../context'
-
-function Dialog(props) {
-    const {alert, showAlert} = useContext(GlobalContext)
+function Dialog({ alert, showAlert }) {
     const overlayClass = alert.visible? "overlay" : "overlay hidden"
     return (
         <div className={overlayClass}>
@@ -18,4 +18,11 @@ function Dialog(props) {
     )
 }
 
-export default Dialog
+Dialog.propTypes = {
+    alert: propTypes.object.isRequired
+}
+
+const mapStateToProps = (state) => ({
+    alert: state.appState.alert
+})
+export default connect(mapStateToProps, { showAlert })(Dialog)

@@ -44,7 +44,7 @@
 .overlay .dialog span.dialog-close:active{
     background: #E38383;
 }
-.overlay .dialog span.dialog-close:before {
+.overlay .dialog span.dialog-close::before {
     content: "×";
 }
 .overlay .dialog button.btn-default{

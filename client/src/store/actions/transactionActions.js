@@ -1,117 +1,116 @@
-import React, { createContext, useReducer, useContext } from 'react'
+//import store from '../store'
 import axios from 'axios'
-import { TransactionReducer } from './Reducer'
+import { GET_TRANSACTIONS, EDIT_TRANSACTION, DELETE_TRANSACTION, ADD_TRANSACTION, SHOW_ALERT, IN_PROGRESS } from './types'
 
-import { GlobalContext } from './GlobalState'
-
-//Initial state
-const initialState = {
-    transactions: [],
-};
-
-//Create a Global context
-export const TransactionContext = createContext(initialState)
-
-//Global Provider Component
-export const TransactionProvider = ({ children }) => {
-    const [state, dispatch] = useReducer(TransactionReducer, initialState)
-    const { setProgress, showAlert } = useContext(GlobalContext)
-
-    //Actions
-    async function getTransactions() {
+const setProgress = (dispatch, showInProgress) => {
+    dispatch({
+        type: IN_PROGRESS,
+        payload: {
+            showInProgress
+        }
+    })
+}
+const showAlert = (dispatch, alertDetails) => {
+    dispatch({
+        type: SHOW_ALERT,
+        payload: {
+            ...alertDetails
+        }
+    })
+}
+export function getTransactions() {
+    return async function(dispatch, getState) {
         try {
-            setProgress(true);
+            setProgress(dispatch,true);
             const res = await axios.get('api/v1/transactions');
             dispatch({
-                type: 'GET_TRANSACTIONS',
+                type: GET_TRANSACTIONS,
                 payload: res.data.data
             });
         } catch (err) {
-            showAlert({
+            dispatch({
+                type: GET_TRANSACTIONS,
+                payload: []
+            });
+            showAlert(dispatch, {
                 visible: true,
                 message: 'Something went wrong. Please contact the administrator if the issue persists.',
                 type: 'ERROR'
             });
         } finally {
-            setProgress(false);
+            setProgress(dispatch, false);
         }
     }
+}
 
-    async function deleteTransaction(id) {
+export function deleteTransaction(id) {
+    return async function(dispatch) {
         try {
-            setProgress(true);
+            setProgress(dispatch, true);
             await axios.delete(`/api/v1/transactions/${id}`);
             dispatch({
-                type: 'DELETE_TRANSACTION',
+                type: DELETE_TRANSACTION,
                 payload: id
             })
         } catch (err) {
-            showAlert({
+            showAlert(dispatch, {
                 visible: true,
                 message: 'Something went wrong. Please contact the administrator if the issue persists.',
                 type: 'ERROR'
             });
         } finally {
-            setProgress(false);
+            setProgress(dispatch, false);
         }
     }
-    async function addTransaction(transaction) {
+}
+export function addTransaction(transaction) {
+    return async function(dispatch) {
         const config = {
             headers: {
                 'Content-Type': 'application/json'
             }
         };
-        setProgress(true);
+        setProgress(dispatch, true);
         try {
             const res = await axios.post('/api/v1/transactions/', transaction, config);
             dispatch({
-                type: 'ADD_TRANSACTION',
+                type: ADD_TRANSACTION,
                 payload: res.data.data
             })
         } catch (err) {
-            showAlert({
+            showAlert(dispatch, {
                 visible: true,
                 message: 'Something went wrong. Please contact the administrator if the issue persists.',
                 type: 'ERROR'
             });
         } finally {
-            setProgress(false);
+            setProgress(dispatch, false);
         }
     }
+}
 
-    async function editTransaction(transaction) {
+export function editTransaction(transaction) {
+    return async function(dispatch) {
         const config = {
             headers: {
                 'Content-Type': 'application/json'
             }
         };
-        setProgress(true);
+        setProgress(dispatch, true);
         try {
-            await axios.put(`/api/v1/transactions/${transaction._id}`, transaction, config);
-            // dispatch({
-            //     type: 'EDIT_TRANSACTION',
-            //     payload: res.data.data
-            // })
+            const res = await axios.put(`/api/v1/transactions/${transaction._id}`, transaction, config);
+            dispatch({
+                type: EDIT_TRANSACTION,
+                payload: res.data.data
+            })
         } catch (err) {
-            showAlert({
+            showAlert(dispatch, {
                 visible: true,
                 message: 'Something went wrong. Please contact the administrator if the issue persists.',
                 type: 'ERROR'
             });
         } finally {
-            setProgress(false);
+            setProgress(dispatch, false);
         }
     }
-
-    return (
-        <TransactionContext.Provider value={{
-            transactions: state.transactions,
-            getTransactions,
-            deleteTransaction,
-            addTransaction,
-            editTransaction
-        }}>
-            {children}
-        </TransactionContext.Provider>
-    )
 }
