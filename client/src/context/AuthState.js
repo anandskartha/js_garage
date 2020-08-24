@@ -56,8 +56,8 @@ export const AuthProvider = ( { children } ) => {
     }
     async function logOut({ email }) {
         axios.defaults.headers.common.Authorization = null
-        localStorage.setItem('authorization', null);
-        localStorage.setItem('user', null);
+        localStorage.removeItem('authorization');
+        localStorage.removeItem('user');
         dispatch({
             type: 'LOG_IN',
             payload: {
