@@ -71,7 +71,7 @@ header #branding h1{
     margin:0;
 }
 header nav{
-    margin-left: 50%;
+    float: right;
     margin-top: 32px;
 }
 header .highlight{
