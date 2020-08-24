@@ -42,7 +42,6 @@ class App extends React.Component {
                                             <li><Login/></li>
                                         </ul>
                                     </nav>
-                                    
                                 </div>
                             </header>
                                 <Switch>
