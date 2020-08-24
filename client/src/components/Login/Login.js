@@ -8,7 +8,7 @@ function Login() {
         <div className="login-space">
             {!loggedIn? (<><button onClick={() => logIn({
                 email: 'anand@gmail.com'
-            })}>Login</button><Redirect to='/' /></>) : (<button onClick={() => logOut({
+            })}>Login</button><Redirect to='/about' /></>) : (<button onClick={() => logOut({
                 email: 'anand@gmail.com'
             })}>Log off</button>)}
         </div>

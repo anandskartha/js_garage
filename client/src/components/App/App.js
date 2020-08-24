@@ -39,9 +39,10 @@ class App extends React.Component {
                                             <li><NavLink to="/todoApp" label="TodoR" /></li>
                                             <li><NavLink to="/expenseTracker" label="Expenser"/></li>
                                             <li><NavLink to="/about" label="About"/></li>
+                                            <li><Login/></li>
                                         </ul>
                                     </nav>
-                                    <Login/>
+                                    
                                 </div>
                             </header>
                                 <Switch>
