@@ -34,7 +34,7 @@ export function getTransactions() {
             });
             showAlert(dispatch, {
                 visible: true,
-                message: 'Something went wrong. Please contact the administrator if the issue persists.',
+                message: 'Please login to continue. Contact the administrator if the issue persists.',
                 type: 'ERROR'
             });
         } finally {
@@ -55,7 +55,7 @@ export function deleteTransaction(id) {
         } catch (err) {
             showAlert(dispatch, {
                 visible: true,
-                message: 'Something went wrong. Please contact the administrator if the issue persists.',
+                message: 'Please login to continue. Contact the administrator if the issue persists.',
                 type: 'ERROR'
             });
         } finally {
@@ -80,7 +80,7 @@ export function addTransaction(transaction) {
         } catch (err) {
             showAlert(dispatch, {
                 visible: true,
-                message: 'Something went wrong. Please contact the administrator if the issue persists.',
+                message: 'Please login to continue. Contact the administrator if the issue persists.',
                 type: 'ERROR'
             });
         } finally {
@@ -106,7 +106,7 @@ export function editTransaction(transaction) {
         } catch (err) {
             showAlert(dispatch, {
                 visible: true,
-                message: 'Something went wrong. Please contact the administrator if the issue persists.',
+                message: 'Please login to continue. Contact the administrator if the issue persists.',
                 type: 'ERROR'
             });
         } finally {

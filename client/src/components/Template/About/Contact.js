@@ -41,7 +41,7 @@ function Contact({ setProgress, showAlert }) {
         } catch (err) {
             showAlert({
                 visible: true,
-                message: 'Something went wrong. Please contact the administrator if the issue persists.',
+                message: 'Please login to continue. Contact the administrator if the issue persists.',
                 type: 'ERROR'
             });
         } finally {
