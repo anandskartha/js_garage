@@ -1,6 +1,7 @@
 import imgReact from '../../../../images/techs/react.jpg'
 import imgRedux from '../../../../images/techs/redux.jpg'
 import imgAngular from '../../../../images/techs/angular.jpg'
+import imgTypescript from '../../../../images/techs/typescript.jpg'
 import imgES6 from '../../../../images/techs/es6.jpg'
 import imgES5 from '../../../../images/techs/es5.jpg'
 import imgJquery from '../../../../images/techs/jquery.jpg'
@@ -8,6 +9,7 @@ import imgNode from '../../../../images/techs/node.jpg'
 import imgExpress from '../../../../images/techs/express.jpg'
 import imgNPM from '../../../../images/techs/npm.jpg'
 import imgMongo from '../../../../images/techs/mongodb.jpg'
+import imgDocker from '../../../../images/techs/docker.jpg'
 import imgREST from '../../../../images/techs/rest.jpg'
 import imgJSON from '../../../../images/techs/json.jpg'
 import imgWebpack from '../../../../images/techs/webpack.jpg'
@@ -36,9 +38,16 @@ const carouselContent = [
     },
     {
         id: 'angular',
-        title: "Angular 1.0",
+        title: "AngularJS",
         description: "The front-end framework is used along with Node, Express and Mongoose (MEAN) stack",
         image: imgAngular,
+        proficiency: 3
+    },
+    {
+        id: 'typescript',
+        title: "TypeScript",
+        description: "Strongly typed Javascript",
+        image: imgTypescript,
         proficiency: 4
     },
     {
@@ -89,6 +98,13 @@ const carouselContent = [
         description: "Used with Mongoose package in the server",
         image: imgMongo,
         proficiency: 3
+    },
+    {
+        id: 'docker',
+        title: "Docker",
+        description: "Deploy Apps as Containers",
+        image: imgDocker,
+        proficiency: 3.5
     },
     {
         id: 'rest',
