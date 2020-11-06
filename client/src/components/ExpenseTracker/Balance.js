@@ -1,9 +1,9 @@
-import React, { useContext } from 'react'
-import { TransactionContext } from '../../context'
+import React from 'react'
+import propTypes from "prop-types";
+import { connect } from 'react-redux'
 import { amountFormatter } from '../../utils';
 
-export const Balance = () => {
-    const { transactions } = useContext(TransactionContext)
+const Balance = ({ transactions }) => {
     const amounts = transactions.map(transaction => transaction.amount)
     const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2)
     return (
@@ -13,3 +13,10 @@ export const Balance = () => {
         </>
     )
 }
+Balance.propTypes = {
+    transactions: propTypes.array.isRequired
+}
+const mapStateToProps = (state) => ({
+    transactions: state.transactions.transactions
+})
+export default connect(mapStateToProps, {})(Balance)

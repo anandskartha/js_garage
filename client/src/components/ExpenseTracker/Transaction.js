@@ -1,10 +1,12 @@
-import React, { useContext, useState } from 'react'
-import {TransactionContext} from '../../context'
+import React, { useState } from 'react'
+import propTypes from "prop-types";
+import { editTransaction,  deleteTransaction} from '../../store/actions/transactionActions'
+import { connect } from 'react-redux'
+
 import { amountFormatter } from '../../utils'
 
-export function Transaction({ transaction }) {
+function Transaction({ transaction, editTransaction, deleteTransaction }) {
     let tranStateChanged = false;
-    const { editTransaction, deleteTransaction } = useContext(TransactionContext)
     const [transactionState, setTransactionState] = useState(transaction)
     const [editText, setEditText] = useState(false)
     const [editAmount, setEditAmount] = useState(false)
@@ -55,3 +57,11 @@ export function Transaction({ transaction }) {
         </li>
     )
 }
+
+Transaction.propTypes = {
+    transaction: propTypes.object.isRequired,
+    editTransaction: propTypes.func.isRequired,
+    deleteTransaction: propTypes.func.isRequired
+}
+
+export default connect(null, { editTransaction, deleteTransaction })(Transaction)

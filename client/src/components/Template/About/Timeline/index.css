@@ -1,3 +1,8 @@
+
+div.timeline-container *::before, .timeline-container *::after {
+  box-sizing: content-box !important;
+}
+
 div.timeline-container {	
     margin: 0;
     margin-bottom: 50px;
@@ -21,7 +26,7 @@ div.timeline-container {
     list-style-type: none;
   }
   
-  div.timeline-container .timeline:before {
+  div.timeline-container .timeline::before {
     position: absolute;
     left: 50%;
     top: 0;
@@ -45,14 +50,14 @@ div.timeline-container {
     padding: 1em 0;
   }
   
-  div.timeline-container .timeline li:after {
+  div.timeline-container .timeline li::after {
     content: "";
     display: block;
     height: 0;
     clear: both;
     visibility: hidden;
   }
-  
+
   /* ================ Timeline Media Queries ================ */
   
   @media screen and (max-width: 768px) {
@@ -83,8 +88,8 @@ div.timeline-container {
       z-index: 15;
   }
   
-  div.timeline-container .direction-l .flag:before,
-  div.timeline-container .direction-r .flag:before {
+  div.timeline-container .direction-l .flag::before,
+  div.timeline-container .direction-r .flag::before {
     position: absolute;
     top: -30px;
       left: 50%;
@@ -99,8 +104,8 @@ div.timeline-container {
       z-index: 10;
   }
   
-  div.timeline-container .direction-l .flag:after,
-  div.timeline-container .direction-r .flag:after {
+  div.timeline-container .direction-l .flag::after,
+  div.timeline-container .direction-r .flag::after {
       content: "";
       position: absolute;
       left: 50%;
