@@ -1,8 +1,15 @@
 [
     {
+        "id": "tcs",
+        "title": "TCS",
+        "period": "2020 - present",
+        "content": "In Tata Consultancy Services, the client I am working with is Paypal Inc where I work along with the engineers to add value to the customer facing web application with highest quality.",
+        "direction": "left"
+    },
+    {
         "id": "oracle",
         "title": "Oracle Corporation",
-        "period": "2016 - present",
+        "period": "2016 - 2020",
         "content": "Oracle is the third organization that I'm working with in my career. Here, I am working on a powerful tool for Global Project Management in Construction & Engineering domain. I am also part of other web based applications in the same department. All these web apps are using the latest Javacript technologies, including React, Node.js & Express, Mongoose, ES6 with babel & webpack and ES5 with grunt & Require.JS. I am the lead front-end developer for this product, and my responsibilities includes collection of requirements from analysts, creating designs, code, create unit tests and fixing bugs. I am an active communicator with all the stakeholders of this product for technical or non-technical matters.",
         "direction": "right"
     },
