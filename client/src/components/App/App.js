@@ -64,7 +64,7 @@ class App extends React.Component {
                                             </div>
                                         </Route>
                                         <Route exact path='/about'>
-                                            <Showcase header="A little bit about me" content="" btnTitle="Say Hi!" bgColor="#212121" btnClickAction={() => ref.current.scrollIntoView({behavior: 'smooth'})}/>
+                                            <Showcase header="I write web apps that solve every-day problems." content="" btnTitle="Say Hi!" bgColor="#212121" btnClickAction={() => ref.current.scrollIntoView({behavior: 'smooth'})}/>
                                             <div className="main-content">
                                                 <About contactRef={ref}/>
                                             </div>
